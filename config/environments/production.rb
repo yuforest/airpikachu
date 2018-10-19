@@ -94,7 +94,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { host: 'airpukachuclone.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'airpikachuclone.herokuapp.com' }
+   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
     address: 'smtp.sendgrid.com',
@@ -103,7 +104,7 @@ Rails.application.configure do
     authentication: 'plain',
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
-    :domain         => 'herokuapp.com',
+    :domain         => 'airpikachuclone.herokuapp.com',
     :enable_starttls_auto => true
    }
 end
