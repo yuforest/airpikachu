@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
-         :confirmable, :omniauthable, omniauth_providers: [:facebook]
+         :confirmable, :omniauthable
 
   validates :fullname, presence: true, length: { maximum: 50 }
   include Gravtastic
