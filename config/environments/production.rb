@@ -114,7 +114,7 @@ Rails.application.configure do
     authentication: 'plain',
     user_name: ENV['MAIL_ADDRESS'],
     password: ENV['MAIL_PASSWORD'],
-    domain: 'airpikachuclone.herokuapp.com',
+    domain: 'herokuapp.com',
     enable_starttls_auto: true
    }
 end
