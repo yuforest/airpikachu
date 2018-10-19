@@ -97,14 +97,24 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'airpikachuclone.herokuapp.com' }
    config.action_mailer.perform_deliveries = true
 
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.sendgrid.com',
+  #   port: 587,
+  #   eneble_starttls_auto: true,
+  #   authentication: 'plain',
+  #   user_name: ENV['SENDGRID_USERNAME'],
+  #   password: ENV['SENDGRID_PASSWORD'],
+  #   :domain         => 'airpikachuclone.herokuapp.com',
+  #  }
+
   config.action_mailer.smtp_settings = {
-    address: 'smtp.sendgrid.com',
+    address: 'smtp.gmail.com',
     port: 587,
     eneble_starttls_auto: true,
     authentication: 'plain',
-    user_name: ENV['SENDGRID_USERNAME'],
-    password: ENV['SENDGRID_PASSWORD'],
-    :domain         => 'airpikachuclone.herokuapp.com',
-    :enable_starttls_auto => true
+    user_name: ENV['MAIL_ADDRESS'],
+    password: ENV['MAIL_PASSWORD'],
+    domain: 'airpikachuclone.herokuapp.com',
+    enable_starttls_auto: true
    }
 end
