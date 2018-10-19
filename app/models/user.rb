@@ -18,7 +18,7 @@ class User < ApplicationRecord
 		  where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 		    user.email = auth.info.email
 		    user.password = Devise.friendly_token[0,20]
-		    user.fullname = auth.info.fullname
+		    user.fullname = auth.info.name
 		    user.image = auth.info.image 
 		    user.uid = auth.uid
 		    user.provider = auth.provider
